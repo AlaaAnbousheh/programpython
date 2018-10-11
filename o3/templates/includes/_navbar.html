@@ -1,0 +1,51 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fulid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">MyAdcApp</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <ul class="nav navbar-nav">
+            <li><a href="/home"> <span class="glyphicon glyphicon-home"> Home</a></li>
+
+          </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+
+              <
+
+            {% if session.hostlogged_in %}
+   <li><a href="/hostdis"> <span class="glyphicon glyphicon-ok" style="color:green" ></span> <span class="glyphicon glyphicon-oil"> Server</a></li>
+            {% if session.logged_in %}
+
+              <li><a href="/dashboard"> <span class="glyphicon glyphicon-equalizer"> Dashboard</a></li>
+              <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            {% else %}
+              <li><a href="/register"><span class="glyphicon glyphicon-new-window"> Register</a></li>
+              <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              {% endif %}
+                {% else %}
+              <li><a href="/hosting"> <span class="glyphicon glyphicon-remove" style="color:red" ></span> <span class="glyphicon glyphicon-oil"> Server</a></li>
+
+            {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+
+    <div class="navbar-header">
+
+      <a class="navbar-brand" ></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <ul class="nav navbar-nav">
+
+
+    </ul>
+  </div>
+</nav>
